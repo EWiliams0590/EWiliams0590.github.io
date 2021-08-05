@@ -20,7 +20,12 @@
 				<!-- Intro -->
 					<div id="intro">
 						<h1>Ethan Williams <br/> Portfolio</h1>
-						<p>Aspiring Data Scientist Analyst skilled in SQL, Python, Machine Learning, and Tableau.</p>
+						<p>A Mathematics Ph.D. and aspiring Data Scientist Analyst with technical skills:<br>
+								SQL (Microsoft SQL Server)<br>
+								Python (Pandas, Numpy, Matplotlib, Sci-Kit Learn, Tensorflow, Keras, Spacy)<br>
+								Machine Learning (Linear Regression, Tree-based Models, Classification, Clustering, Time Series, NLP)<br>
+								Tableau
+						</p>
 						<p><a href="https://www.linkedin.com/in/ethan-williams-5913bb211/">LinkedIn</a>|
 						   <a href="https://github.com/EWiliams0590">GitHub</a>| 
 						   <a href="https://public.tableau.com/app/profile/ethan.williams">Tableau Public</a></p>
@@ -32,15 +37,11 @@
 				<!-- Nav -->
 					<nav id="nav">
 						<ul class="links">
-							<li class="active"><a href="index.html">Machine Learning Projects</a></li>
-							<li><a href="generic.html">Tableau Visualizations</a></li>
-						</ul>
-						<ul>
-							<li><a href="https://github.com/EWiliams0590" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+							<li class="active"><a href="index.html">Projects</a></li>
 						</ul>
 					</nav>
 
-				<!-- Main -->
+					<!-- Main -->
 					<div id="main">
 
 						<!-- Posts -->
@@ -51,8 +52,9 @@
 										</a></h2>
 									</header>
 									<a href="https://github.com/EWiliams0590/Spotify" class="image fit"><img src="images/music_picture.jpg" alt="" /></a>
-									<p>This project takes my streaming data from Spotify and creates a recommended playlist using a K-Means clustering model.</p>
-									<strong><a href="https://github.com/EWiliams0590/Spotify">GitHub</a></strong>
+									<p>This project takes my streaming data from Spotify and creates a recommended playlist using a K-Means clustering model. 
+										For reproducibility purposes, most of the files in the repository are .py files.</p>
+									<strong><a href="https://github.com/EWiliams0590/Spotify">GitHub Repository</a></strong>
 								</article>
 								<article>
 									<header>
@@ -61,9 +63,38 @@
 									<a href="https://github.com/EWiliams0590/StockPredictor" class="image fit"><img src="images/stock_picture.jpg" alt="" /></a>
 									<p>
 										This project was made to analyze many different stock tickers and discover attributes that beat the market. Two custom attributes beat
-										the overall market by 60%.
+										the overall market by 60%. For reproducibility purposes, most of the files in the repository are .py files.
 									</p>
-									<strong><a href="https://github.com/EWiliams0590/StockPredictor">GitHub</a></strong>
+									<strong><a href="https://github.com/EWiliams0590/StockPredictor">GitHub Repository</a></strong>
+								</article>
+								<article>
+									<header>
+										<h2><a href="https://github.com/EWiliams0590/LendingClub/blob/main/Sample%20Lending%20Club%20Proj.ipynb">Lending Club Loan Classification Prediction</a></h2>
+									</header>
+									<a href="https://github.com/EWiliams0590/LendingClub/blob/main/Sample%20Lending%20Club%20Proj.ipynb" class="image fit"><img src="images/bank.jpg" alt="" /></a>
+									<p>
+										Using the <a href="https://www.kaggle.com/wordsforthewise/lending-club">Lending Club dataset</a>, I wanted to create a model to better predict whether a loan would
+										be fully paid or charged off. I did preliminary cleaning and feature engineering in SQL, then explored, visualized, and created a predictive model using Python (Jupyter Notebook).
+										The results showed that one of the engineered features (Zip-code, from address) greatly increased the predictive accuracy (~89% vs ~80% baseline). Both a neural network
+										using Tensorflow/Keras and XGBoostClassifier were used, and performed almost exactly the same, so I kept the XGBoost model as the final due to interpretability.
+									</p>
+									<strong><a href="https://github.com/EWiliams0590/LendingClub/blob/main/QueryForLendingClub.sql">SQL Query</a></strong><br/>
+									<strong><a href=https://github.com/EWiliams0590/LendingClub/blob/main/Sample%20Lending%20Club%20Proj.ipynb>Jupyter Notebook</a></strong>
+								</article>
+								<article>
+									<header>
+										<h2><a href="https://github.com/EWiliams0590/SuperstoreSalesForecasting/blob/main/Superstore%20EDA%20and%20Forecasting.ipynb">Superstore Sales Forecasting</a></h2>
+									</header>
+									<a href="https://github.com/EWiliams0590/SuperstoreSalesForecasting/blob/main/Superstore%20EDA%20and%20Forecasting.ipynb" class="image fit"><img src="images/Store.jpg" alt="" /></a>
+									<p>
+										Using the <a href="https://www.kaggle.com/rohitsahoo/sales-forecasting">Superstore Sales data</a>, which is sales from a store containing categories Office Supplies,
+										Technology, and Furniture. I noticed that the average sales per order varied a lot with the three categories, so decided to focus on forecasting only the Furniture
+										category. Digging into this, there were four subcategories, one of which (Furnishings) had a very low average sale per order vs. others, so I split this into two
+										datasets from here, "Furnishings" and "Non-Furnishings". I then explored the data further and use Prophet to forecast individually on the Furnishings and Non-Furnishings
+										data. Despite highly irregular data with too much noise, the model was able to have the mean absolute percentage error on the two for daily predictions to be 89% and 54%,
+										respectively.
+									</p>
+									<strong><a href=https://github.com/EWiliams0590/SuperstoreSalesForecasting/blob/main/Superstore%20EDA%20and%20Forecasting.ipynb>Jupyter Notebook</a></strong>
 								</article>
 								<article>
 									<header>
@@ -71,12 +102,12 @@
 									</header>
 									<a href="https://github.com/EWiliams0590/AbaloneRegression/blob/main/Abalone.ipynb" class="image fit"><img src="images/abalone.jpg" alt="" /></a>
 									<p>
-										This is a Jupyter Notebook for analyzing and creating a regression model to predict the age of an abalone using Python. I made use of
+										This is a Jupyter Notebook for analyzing and creating a regularized linear regression model to predict the age of an abalone using Python. I made use of
 										many of the standard Data Science libraries, including Pandas, Numpy, Matplotlib/Seaborn, Sci-Kit Learn. The regression model performed very
 										well on dataset with less than 14 rings (RMSE ~1.5), which is the majority of the data. There was an RMSE of ~4.5 for the abalone with at 
 										least 14 rings.
 									</p>
-									<strong><a href="https://github.com/EWiliams0590/AbaloneRegression/blob/main/Abalone.ipynb">GitHub</a></strong>
+									<strong><a href="https://github.com/EWiliams0590/AbaloneRegression/blob/main/Abalone.ipynb">Jupyter Notebook</a></strong>
 								</article>
 								<article>
 									<header>
@@ -88,9 +119,34 @@
 										naked eye. Cheap methods (using calipers) are very unreliable and accurate methods are very expensive. By perform extensive feature
 										selection and model selection, an ElasticNet model yielded the best and simplest results, which had a mean absolute error of ~3.5%.
 									</p>
-									<strong><a href="https://github.com/EWiliams0590/BodyFat_Prediction/blob/main/Bodyfat%20Prediction.ipynb">GitHub</a></strong>
+									<strong><a href="https://github.com/EWiliams0590/BodyFat_Prediction/blob/main/Bodyfat%20Prediction.ipynb">Jupyter Notebook</a></strong>
 								</article>
-								
+								<article>
+									<header>
+										<h2><a href="https://public.tableau.com/app/profile/ethan.williams/viz/AdventureWorksSalesAnalysis/FinalSalesDashboard">Adventure Works Sales</a></h2>
+									</header>
+									<a href="https://public.tableau.com/app/profile/ethan.williams/viz/AdventureWorksSalesAnalysis/FinalSalesDashboard" class="image fit"><img src="images/bicycles.jpg" alt="" /></a>
+									<p>
+										This project was done using the database AdventureWorks2019 provided by Microsoft. I used SQL Server to create a complex query involving
+										joins, window functions, user created functions, and stored procedures to get a final view, then analyzed the sales data to see what drove
+										an increase in sales over time. As discovered, the promotion done on the new touring bikes worked quite well.
+									</p>
+									<strong><a href="https://github.com/EWiliams0590/AdventureWorksSQL/blob/main/SampleQueryForAdventureWorks.sql">SQL Query</a></strong><br/>
+									<strong><a href="https://public.tableau.com/app/profile/ethan.williams/viz/AdventureWorksSalesAnalysis/FinalSalesDashboard">Tableau Dashboard</a></strong>
+								</article>
+								<article>
+									<header>
+										<h2><a href="https://public.tableau.com/app/profile/ethan.williams/viz/CovidMap_16181528927000/FinalDashboard">COVID-19 Cases, Deaths, and Vaccinations</a></h2>
+									</header>
+									<a href="https://public.tableau.com/app/profile/ethan.williams/viz/CovidMap_16181528927000/FinalDashboard" class="image fit"><img src="images/covid.jpg" alt="" /></a>
+									<p>
+										I wanted to better understand and visualize how the main data being tracked on COVID would change over time. I found some data by web-scraping
+										and searching for datasets, aggregated created views in SQL Server, then used them in Tableau to visualize cases, deaths, and vaccinations
+										changing over time and how they are related.
+									</p>
+									<strong><a href="https://github.com/EWiliams0590/CovidSQLQuery/blob/main/CovidQuery.sql">SQL Query</a></strong><br/>
+									<strong><a href="https://public.tableau.com/app/profile/ethan.williams/viz/CovidMap_16181528927000/FinalDashboard">Tableau Dashboard</a></strong>
+								</article>
 							</section>
 					</div>
 
